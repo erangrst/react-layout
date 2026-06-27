@@ -49,41 +49,39 @@ function AppMainComponent() {
                 position: 'relative',
             }}
         >
+            {/* Left Side Bar */}
             <Box
-                sx={{
-                    width: 'fit-content',
-                    minWidth: '4rem',
-                    height: '100%',
-                    position: 'relative',
-                    overflow: 'visible',
-                    border: '5px solid lightblue',
-                    bgcolor: 'background.paper',
-
-                    display: 'flex',
-                    alignItems: 'stretch',
-                }}
+                component="aside"
+                sx={{ width: 'fit-content', minWidth: '4rem', height: '100%', position: 'relative', overflow: 'visible', border: '5px solid lightblue', bgcolor: 'background.paper', display: 'flex', alignItems: 'stretch', }}
             >
                 <SideBarComponent />
             </Box>
 
+            {/* Main Content Area */}
             <Box
                 component="section"
                 sx={{
                     flex: 1,
                     minHeight: 0,
                     border: '5px solid yellow',
-                    p: 3,
                     bgcolor: 'background.paper',
-                    overflowY: 'auto',
+                    overflow: 'hidden',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    padding: '0rem',
                 }}
             >
-                <Tabs value={tabIndex} onChange={handleTabChange} aria-label="Main tabs">
-                    <Tab label="Tree" id="tab-0" aria-controls="tabpanel-0" />
-                    <Tab label="Table A" id="tab-1" aria-controls="tabpanel-1" />
-                    <Tab label="Table B" id="tab-2" aria-controls="tabpanel-2" />
+                <Tabs
+                    value={tabIndex}
+                    onChange={handleTabChange}
+                    sx={{ border: '1px solid lightgreen', minHeight: '36px', height: '36px', flex: '0 0 auto' }}
+                >
+                    <Tab label="Tree" sx={{ padding: '4px 8px', minHeight: '36px', height: '36px' }} />
+                    <Tab label="Table A" sx={{ padding: '4px 8px', minHeight: '36px', height: '36px' }} />
+                    <Tab label="Table B" sx={{ padding: '4px 8px', minHeight: '36px', height: '36px' }} />
                 </Tabs>
 
-                <Box role="tabpanel" id={`tabpanel-${tabIndex}`} aria-labelledby={`tab-${tabIndex}`} sx={{ mt: 2 }}>
+                <Box role="tabpanel" sx={{ margin: 0, border: '5px solid cadetblue', flex: 1, minHeight: 0, width: '100%', overflow: 'auto' }}>
                     <RenderPanel index={tabIndex} />
                 </Box>
             </Box>
