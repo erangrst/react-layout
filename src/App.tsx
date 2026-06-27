@@ -1,7 +1,6 @@
-import { CssBaseline, ThemeProvider, Typography } from '@mui/material'
-import MainLayoutComponent from './components/MainLayoutComponent'
-import TreeComponent from './components/tree.component'
+import { CssBaseline, ThemeProvider } from '@mui/material'
 import darkTheme from './theme'
+import MainLayoutComponent from './components/layout-feature/MainLayoutComponent';
 
 export function App() {
     return (

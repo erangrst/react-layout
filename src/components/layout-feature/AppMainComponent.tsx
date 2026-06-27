@@ -1,7 +1,8 @@
 import React from 'react'
 import { Box, Tabs, Tab, Typography } from '@mui/material'
 import SideBarComponent from './SideBarComponent'
-import TreeComponent from './tree.component'
+import TreeComponent from '../tree.component'
+import PersonMainComponent from '../person-feature/PersonMainComponent'
 
 // function AppMainComponent({ children }: { children: React.ReactNode }) {
 function RenderPanel({ index }: { index: number }) {
@@ -14,9 +15,8 @@ function RenderPanel({ index }: { index: number }) {
             )
         case 1:
             return (
-                <Box sx={{ p: 2 }}>
-                    <Typography variant="h6">Table A</Typography>
-                    <Box sx={{ mt: 1 }}>This is placeholder content for Table A.</Box>
+                <Box sx={{ p: 0, height: '100%' }}>
+                    <PersonMainComponent />
                 </Box>
             )
         case 2:
