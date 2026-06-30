@@ -14,7 +14,7 @@ const columns: GridColDef<PizzaOrder>[] = [
 
 function PizzaOrderComponent() {
     return (
-        <Box sx={{ height: '100%', width: '100%', overflow: 'hidden' }}>
+        <Box sx={{ width: '100%', overflow: 'auto' }}>
             <DataGrid
                 rows={pizzaOrders}
                 columns={columns}
