@@ -21,7 +21,7 @@ function MainLayoutComponent() {
 
             <AppStatusComponent />
 
-            <AppMainComponent></AppMainComponent>
+            <AppMainComponent />
         </Box >
     )
 }

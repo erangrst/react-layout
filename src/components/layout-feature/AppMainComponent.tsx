@@ -3,6 +3,8 @@ import { Box, Tabs, Tab, Typography } from '@mui/material'
 import SideBarComponent from './SideBarComponent'
 import TreeComponent from '../tree.component'
 import PersonMainComponent from '../person-feature/PersonMainComponent'
+import FoodComponent from '../orders-feature/FoodComponent'
+import FoodExpandedComponent from '../orders-feature/FoodExpandedComponent'
 
 // function AppMainComponent({ children }: { children: React.ReactNode }) {
 function RenderPanel({ index }: { index: number }) {
@@ -21,9 +23,14 @@ function RenderPanel({ index }: { index: number }) {
             )
         case 2:
             return (
-                <Box sx={{ p: 2 }}>
-                    <Typography variant="h6">Table B</Typography>
-                    <Box sx={{ mt: 1 }}>This is placeholder content for Table B.</Box>
+                <Box sx={{ p: 2, height: '100%' }}>
+                    <FoodComponent />
+                </Box>
+            )
+        case 3:
+            return (
+                <Box sx={{ p: 2, height: '100%' }}>
+                    <FoodExpandedComponent />
                 </Box>
             )
         default:
@@ -79,6 +86,7 @@ function AppMainComponent() {
                     <Tab label="Tree" sx={{ padding: '4px 8px', minHeight: '36px', height: '36px' }} />
                     <Tab label="Table A" sx={{ padding: '4px 8px', minHeight: '36px', height: '36px' }} />
                     <Tab label="Table B" sx={{ padding: '4px 8px', minHeight: '36px', height: '36px' }} />
+                    <Tab label="Table C" sx={{ padding: '4px 8px', minHeight: '36px', height: '36px' }} />
                 </Tabs>
 
                 <Box role="tabpanel" sx={{ margin: 0, border: '5px solid cadetblue', flex: 1, minHeight: 0, width: '100%', overflow: 'auto' }}>

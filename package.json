@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "tsc && vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -17,7 +17,8 @@
     "@mui/x-data-grid": "^9.7.0",
     "@mui/x-tree-view": "^9.7.0",
     "react": "^19.2.6",
-    "react-dom": "^19.2.6"
+    "react-dom": "^19.2.6",
+    "typescript": "^6.0.3"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
